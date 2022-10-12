@@ -1,0 +1,80 @@
+@use "../utils/mixins" as *;
+@use "../utils/vars" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.root {
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  background: var(--white);
+  color: var(--text);
+  font-family: var(--font2), Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+.oh {
+  overflow: hidden;
+}
+
+.container {
+  max-width: var(--container);
+  margin: auto;
+  width: 100%;
+  padding: 0 var(--gap);
+  &--lines {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: var(--gap);
+      width: 1px;
+      height: 100%;
+      display: block;
+      background: var(--gray200);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: var(--gap);
+      width: 1px;
+      height: 100%;
+      display: block;
+      background: var(--gray200);
+    }
+  }
+}
+
+.section {
+  padding-top: var(--gap-y);
+}
+
+.hidden-desktop {
+  @include media(lg, min-width) {
+    display: none;
+  }
+}
+
+.hidden-mobile {
+  @include media(lg) {
+    display: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,30 @@
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 60px 40px;
+  &__image {
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: calc(420px / 660px * 100%);
+    position: relative;
+  }
+  &__src {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__info {
+    padding-top: 32px;
+  }
+  &__category {
+    color: var(--gray500);
+    margin: 0 0 16px 0;
+  }
+  &__title {
+    font-size: 24px;
+  }
+}

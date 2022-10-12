@@ -1,0 +1,18 @@
+-var titles = ['Printegy GmbH', 'Kids Fun Palace' , 'Duesseldorf Business School' , 'Space Plus GmbH' , 'Duesseldorf Business School' , 'Space Plus GmbH', 'Duesseldorf Business School' , 'Space Plus GmbH']
+
+section.container.container--lines.section
+  h2.section-title.title Работы,#[br] которыми мы гордимся
+  .home-portfolio.portfolio-grid
+    each val in titles
+      .portfolio-grid__item 
+        .portfolio-grid__image 
+          img.portfolio-grid__src(src="/src/assets/images/placholder.jpg" alt="")
+        .portfolio-grid__info 
+          .portfolio-grid__category
+            span.portfolio-grid__category-item UX/UI Дизайн, 
+            span.portfolio-grid__category-item Фронтенд, 
+            span.portfolio-grid__category-item SEO, 
+            span.portfolio-grid__category-item SMM  
+        h3.portfolio-grid__title.title= val
+  .more-link-wrapper 
+    a.more-link(href="#") Смотреть все кейсы

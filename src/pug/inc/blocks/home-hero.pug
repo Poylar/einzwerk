@@ -1,0 +1,17 @@
+section.container.container--lines.hero-section.hero.home-hero 
+  .hero-row 
+    h1.hero__title.title Помогаем компаниям выглядеть классно в вебе и на бумаге
+    ul.hero-list 
+      li.hero-list__item
+        a.hero-list__link(href="") Создание сайтов
+      li.hero-list__item
+        a.hero-list__link(href="") Продвижение сайтов
+      li.hero-list__item
+        a.hero-list__link(href="") Дизайн-поддержка
+  .hero__video.hero__content.video.js-start-video
+    .video__preview-wrapper 
+      .video__preview
+        img.video__preview-src(src="/src/assets/images/video-preview.jpg" alt="")
+      .video__play 
+        +sprite('play' , 80,  80)
+    video.video__src(src="/src/assets/video/hero.mp4" controls) 
